@@ -6,8 +6,16 @@ public class Main {
     private static Integer reference = 5;
     static long lastTime;
 
-    Main(int i){
+    public Main(int i){
         this.i = i;
+    }
+
+    public static int getPrimitive() {
+        return primitive;
+    }
+
+    public static Integer getReference() {
+        return reference;
     }
 
     public int getI() {
