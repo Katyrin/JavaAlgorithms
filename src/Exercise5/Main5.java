@@ -28,7 +28,6 @@ public class Main5 {
     private static int[] ints = {primitiveInt,primitiveByte,
             (int) primitiveLong,referenceInteger,referenceByte, Math.toIntExact(referenceLong)};
     private static int[] ints2 = Arrays.copyOf(ints,ints.length);
-    private static int[] ints3 = Arrays.copyOf(ints,ints.length);
 
     public static void main(String[] args) {
         //recursionMethod(100);
@@ -65,18 +64,19 @@ public class Main5 {
 
         //Задание 5.6
         lastTime = System.nanoTime();
+        int[] ints3 = sortMerge(ints2);
+        currentTime = System.nanoTime();
+        time = (currentTime - lastTime);
+        System.out.println("sortMerge() = "+time);
+        System.out.println(Arrays.toString(ints3));
+
+        lastTime = System.nanoTime();
         Arrays.sort(ints2);
         currentTime = System.nanoTime();
         time = (currentTime - lastTime);
         System.out.println("sort() = "+time);
         System.out.println(Arrays.toString(ints2));
 
-        lastTime = System.nanoTime();
-        int[] ints4 = sortMerge(ints3);
-        currentTime = System.nanoTime();
-        time = (currentTime - lastTime);
-        System.out.println("sortMerge() = "+time);
-        System.out.println(Arrays.toString(ints4));
     }
 
     // Задание 5.2
