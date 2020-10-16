@@ -168,7 +168,7 @@ public class Main2 {
     }
 
     // Задание 2.4
-    private static float bubbleSort(int[] ints){
+    public static float bubbleSort(int[] ints){
         int[] integers = ints.clone();
         int buff;
         boolean sorted;
@@ -184,9 +184,9 @@ public class Main2 {
             }
         }
         currentTime = System.nanoTime();
-        time = (currentTime - lastTime) * 0.000000001f;
+        time = (currentTime - lastTime);
         System.out.println(Arrays.toString(integers));
-        System.out.println("bubbleSort = "+time);
+        System.out.println("пузырчатая сортировка = "+time);
         return time;
     }
 
@@ -197,7 +197,7 @@ public class Main2 {
     }
 
     // Задание 2.5
-    private static float selectionSort(int[] ints){
+    public static float selectionSort(int[] ints){
         int[] integers = ints.clone();
         lastTime = System.nanoTime();
         for (int i = 0;i < integers.length;i++){
@@ -210,14 +210,14 @@ public class Main2 {
             swap(integers,i,min);
         }
         currentTime = System.nanoTime();
-        time = (currentTime - lastTime) * 0.000000001f;
+        time = (currentTime - lastTime);
         System.out.println(Arrays.toString(integers));
-        System.out.println("selectionSort = "+time);
+        System.out.println("сортировка выбора = "+time);
         return time;
     }
 
     // Задание 2.6
-    private static float insertSort(int[] ints){
+    public static float insertSort(int[] ints){
         int[] integers = ints.clone();
         int buff;
         int in;
@@ -232,9 +232,9 @@ public class Main2 {
             integers[in] = buff;
         }
         currentTime = System.nanoTime();
-        time = (currentTime - lastTime) * 0.000000001f;
+        time = (currentTime - lastTime);
         System.out.println(Arrays.toString(integers));
-        System.out.println("insertSort = "+time);
+        System.out.println("сортировка вставки = "+time);
         return time;
     }
 }
